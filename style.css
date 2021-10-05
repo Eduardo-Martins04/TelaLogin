@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif
+}
+html {
+    height: 100%;
+    margin: 0;
+}
+
+header {
+    grid-area: header;
+}
+
+#left { 
+    grid-area: left;
+}
+
+#right {
+    grid-area: right;
+}
+
+footer {
+    grid-area: footer;
+}
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 80px 1fr 80px;
+    grid-template-areas: 
+    'header header'
+    'left right'
+    'footer footer';
+    margin: 0;
+    padding: 0;
+    background-color: rgb(202, 202, 202);
+    background-image: url('https://i.ibb.co/2KJ1RPc/ceu.jpg');
+    height: 100%;
+
+}
+
+.left, .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+#title{
+    text-align: center;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 300px;
+    background-color: rgb(1, 134, 190);
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 20%), 0 8px 16px rgb(0 0 0 / 20%);
+}
+
+input#user, input#password, input#button {
+    padding: 10px;
+    margin: 10px;
+    border: solid 1px gray;
+    width: 200px;
+    font-size: 17px;
+}
+
+input:hover{
+    box-shadow: 0 2px 4px rgb(0 0 0 / 20%), 0 8px 16px rgb(0 0 0 / 20%);
+}
+
+#button {
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;     
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #bfe5fc;
+
+}
+
+#register{
+    text-decoration: none;
+    margin: 10px;
+    color: white;
+}
+
+#newpassword {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 0.8em;
+}
+
+#register:hover, #newpassword:hover{
+    text-decoration-line: underline ;
+}
+
+#image {
+    height: 300px;
+    width: 300px;
+    
+}
+
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#contact a {
+    padding: 20px;
+    color: white
+}
+
+#contact a:hover {
+    color: rgb(170, 170, 170);
+}
+
+@media (max-width: 600px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: 80px 1fr 80px;
+        grid-template-areas: 
+        'header'
+        'left'
+        'footer'
+  }
+   #image{
+       display: none;
+   }
+}
